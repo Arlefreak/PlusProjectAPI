@@ -84,11 +84,15 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-STATIC_URL = '/static/'
-
 REST_FRAMEWORK = {
     'PAGINATE_BY': 10
 }
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+SERVER = env("SERVER", False)
+if SERVER:
+    STATIC_ROOT = '/srv/http/static/PlusProjectAPI/static/'
+    MEDIA_ROOT = '/srv/http/static/PlusProjectAPI/media/'
