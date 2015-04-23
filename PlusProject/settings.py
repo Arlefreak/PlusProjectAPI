@@ -90,7 +90,6 @@ REST_FRAMEWORK = {
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-CKEDITOR_UPLOAD_PATH = "uploads/"
 
 SERVER = env("SERVER", False)
 if SERVER:
